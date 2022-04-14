@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Caesar encryptor</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" placeholder='Write something to encode...' onkeyup="showOutputOfEncoding(this)">
+        <input type="number" placeholder='Write password' id='password1' value='1' min="1" max="1223">
+        <span class="output"></span>
+        <input type="reset">
+    </form>
+    <br>
+    <form>
+        <input type="text" placeholder='Write something to decode...' onkeyup="showOutputOfDecoding(this)">
+        <input type="number" placeholder='Write password' id='password2' value='1' min="1" max="1223">
+        <span class="output"></span>
+        <input type="reset">
+
+    </form>
+    <script>
+        showOutputOfEncoding = elem =>
+            document.getElementsByClassName('output')[0].innerHTML = encoder(elem.value, Number(document.getElementById('password1').value));
+        showOutputOfDecoding = elem =>
+            document.getElementsByClassName('output')[1].innerHTML = decoder(elem.value, Number(document.getElementById('password2').value))
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+  background-image: linear-gradient(to top, #2cb5e8, #2cb5e8);
+}
+input {
+  background-color: aliceblue;
+  border: none !important;
+  border-radius: 25px;
+  padding: 10px !important;
+  box-shadow: rgb(2, 4, 114) 0px 0px 20px;
+}
+form {
+  display: inline-block;
+  margin-top: 80px !important;
+}
+span{
+    color: #fff;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+::selection {
+  background-color: black !important;
+  color: white;
+}
